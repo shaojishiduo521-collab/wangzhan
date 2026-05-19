@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHERRY - 摄影后期设计师 · 创意视觉艺术</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #050505;
+            color: #a1a1aa; /* zinc-400 */
+        }
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .bg-dashed {
+            background-image: linear-gradient(to bottom, transparent 0%, #27272a 20%, #27272a 80%, transparent 100%);
+        }
+        .glow-teal {
+            box-shadow: 0 0 30px rgba(45, 212, 191, 0.05);
+        }
+        /* 简单入场动画实现 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="selection:bg-teal-500/30 selection:text-teal-200">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 bg-black/50 backdrop-blur-md">
+        <div class="text-xl font-bold tracking-tighter text-white">CHERRY.</div>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+            <a href="#关于" class="hover:text-teal-400 transition-colors">关于</a>
+            <a href="#经历" class="hover:text-teal-400 transition-colors">经历</a>
+            <a href="#技能" class="hover:text-teal-400 transition-colors">技能</a>
+            <a href="#作品" class="hover:text-teal-400 transition-colors">作品</a>
+            <a href="#航海" class="hover:text-teal-400 transition-colors">航海</a>
+            <a href="#联系" class="hover:text-teal-400 transition-colors">联系</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 px-6 text-center overflow-hidden">
+        <!-- Background Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-teal-500/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-purple-500/10 rounded-full blur-[100px] -z-10"></div>
+
+        <div class="relative mb-8 reveal">
+            <div class="w-20 h-20 rounded-full border-2 border-zinc-800 flex items-center justify-center bg-zinc-950 shadow-xl">
+                <span class="text-2xl font-bold text-teal-400">C</span>
+            </div>
+            <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 to-purple-500 rounded-full blur opacity-20"></div>
+        </div>
+
+        <h1 class="text-7xl md:text-9xl font-black tracking-tighter mb-4 bg-gradient-to-r from-purple-400 via-teal-400 to-teal-200 bg-clip-text text-transparent reveal">
+            CHERRY
+        </h1>
+
+        <p class="text-lg md:text-xl font-medium text-zinc-300 mb-6 reveal">
+            摄影后期设计师 · 创意视觉艺术
+        </p>
+
+        <p class="max-w-2xl text-zinc-500 mb-10 leading-relaxed reveal">
+            近十年视觉创作经验，专注创意合成、相册设计与人像精修。用镜头语言讲述故事，让每一帧都成为值得珍藏的艺术品。
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 reveal">
+            <a href="#作品" class="px-8 py-3 bg-teal-500 hover:bg-teal-400 text-black font-semibold rounded-lg transition-all shadow-lg shadow-teal-500/20">
+                查看作品
+            </a>
+            <a href="#联系" class="px-8 py-3 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg border border-zinc-800 transition-all">
+                联系我
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="关于" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mb-12 reveal">
+            <div class="flex items-center gap-4 text-xs font-mono text-zinc-500 mb-2">
+                <span class="text-teal-400 font-bold">01 </span>
+                <span class="h-[1px] w-12 bg-zinc-800"></span>
+                <span class="uppercase tracking-widest">关于</span>
+            </div>
+            <h2 class="text-4xl font-bold tracking-tight text-white">Hello, I'm <span class="text-teal-400">Cherry</span></h2>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <div class="lg:col-span-1 reveal">
+                <div class="aspect-square rounded-2xl border border-zinc-800 bg-zinc-950 relative overflow-hidden group">
+                    <img 
+                        src="https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/meg4.jpg" 
+                        alt="Cherry"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/40 pointer-events-none"></div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 space-y-8 reveal">
+                <div class="p-8 rounded-2xl border border-zinc-800 bg-zinc-950/50 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 blur-3xl group-hover:bg-teal-500/10 transition-colors"></div>
+                    <p class="text-zinc-400 leading-relaxed mb-6">
+                        深耕场景合成、创意排版设计、人像精修与光影调色，精通从照片到成品的全流程视觉创作。近十年职业生涯中，为众多高端摄影品牌打造了具有艺术价值的视觉作品。
+                    </p>
+                    <p class="text-zinc-400 leading-relaxed">
+                        当前以自由创作者身份探索新边界 —— 已跑通 AI 写作、公众号运营、抖音 CPS 的最小 MVP，现深耕公众号运营与 AI 编程，持续交付高质量的内容与设计作品。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-mono text-zinc-500 uppercase tracking-widest">核心专长</h4>
+                        <p class="text-zinc-300 font-medium italic">创意合成 · 相册设计 · 人像精修</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-mono text-zinc-500 uppercase tracking-widest">探索方向</h4>
+                        <p class="text-zinc-300 font-medium italic">AI 编程 · 内容创作 · 流程自动化</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 pt-4">
+                    <div class="flex items-center gap-2 text-zinc-400">
+                        <div class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></div>
+                        <span class="text-xs">开放合作中</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-zinc-400">
+                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                        <span class="text-xs">远程办公</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="经历" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mb-12 reveal">
+            <div class="flex items-center gap-4 text-xs font-mono text-zinc-500 mb-2">
+                <span class="text-teal-400 font-bold">02 </span>
+                <span class="h-[1px] w-12 bg-zinc-800"></span>
+                <span class="uppercase tracking-widest">经历</span>
+            </div>
+            <h2 class="text-4xl font-bold tracking-tight text-white">我的职业<span class="text-teal-400">历程</span></h2>
+        </div>
+        
+        <div class="relative space-y-12">
+            <!-- Vertical Line -->
+            <div class="absolute left-[45%] md:left-1/2 top-4 bottom-4 w-px bg-zinc-800 hidden md:block"></div>
+
+            <!-- Item 1 -->
+            <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-start reveal">
+                <div class="absolute left-[45%] md:left-1/2 top-4 -translate-x-1/2 w-3 h-3 rounded-full bg-zinc-950 border-2 border-teal-500 z-10 hidden md:block"></div>
+                <div class="md:pt-1">
+                    <span class="text-xs font-mono text-zinc-600 mb-2 block">2019.04 - 2024.12</span>
+                    <h3 class="text-xl font-bold text-white mb-1">后期设计负责人</h3>
+                </div>
+                <div class="md:pt-1">
+                    <div class="p-6 rounded-xl border border-zinc-800/50 bg-zinc-950/30 hover:bg-zinc-900/50 transition-colors group">
+                        <h4 class="text-teal-400 font-medium mb-3">杭州美人纪摄影</h4>
+                        <p class="text-sm text-zinc-500 leading-relaxed mb-4">带领后期设计团队，统筹相册排版与照片精修全流程。通过优化设计与品控流程，实现交付率达95%以上，降低返工率约20%。</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-xs text-zinc-400"><svg class="w-3 h-3 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 交付率达95%以上</li>
+                            <li class="flex items-center gap-2 text-xs text-zinc-400"><svg class="w-3 h-3 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 降低返工率约20%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-start md:text-right reveal">
+                <div class="absolute left-[45%] md:left-1/2 top-4 -translate-x-1/2 w-3 h-3 rounded-full bg-zinc-950 border-2 border-teal-500 z-10 hidden md:block"></div>
+                <div class="md:pt-1 md:order-2 md:text-left">
+                    <span class="text-xs font-mono text-zinc-600 mb-2 block">2016.06 - 2019.03</span>
+                    <h3 class="text-xl font-bold text-white mb-1">后期设计师</h3>
+                </div>
+                <div class="md:pt-1 md:order-1">
+                    <div class="p-6 rounded-xl border border-zinc-800/50 bg-zinc-950/30 hover:bg-zinc-900/50 transition-colors group">
+                        <h4 class="text-teal-400 font-medium mb-3">佳丽摄影</h4>
+                        <p class="text-sm text-zinc-500 leading-relaxed mb-4">负责客户相册的版式设计，为不同风格的拍摄项目提供定制化后期方案，高效保障出片质量与交付时效，月均完成 150 套客片的全流程后期制作。</p>
+                        <ul class="space-y-2 flex flex-col md:items-end">
+                            <li class="flex items-center gap-2 text-xs text-zinc-400"><svg class="w-3 h-3 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 月均完成 150 套客片</li>
+                            <li class="flex items-center gap-2 text-xs text-zinc-400"><svg class="w-3 h-3 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 定制化后期方案</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="技能" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mb-12 reveal">
+            <div class="flex items-center gap-4 text-xs font-mono text-zinc-500 mb-2">
+                <span class="text-teal-400 font-bold">03 </span>
+                <span class="h-[1px] w-12 bg-zinc-800"></span>
+                <span class="uppercase tracking-widest">技能</span>
+            </div>
+            <h2 class="text-4xl font-bold tracking-tight text-white">工具与<span class="text-teal-400">专长</span></h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+            <div class="p-8 rounded-2xl border border-zinc-800 bg-zinc-950/40 hover:border-zinc-700/50 transition-all group">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-400 group-hover:bg-teal-500/20 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-white tracking-tight">摄影后期</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-[11px] font-medium text-zinc-500 bg-zinc-900/50 border border-zinc-800 rounded-full">人像精修</span>
+                    <span class="px-3 py-1 text-[11px] font-medium text-zinc-500 bg-zinc-900/50 border border-zinc-800 rounded-full">光影调色</span>
+                    <span class="px-3 py-1 text-[11px] font-medium text-zinc-500 bg-zinc-900/50 border border-zinc-800 rounded-full">场景合成</span>
+                </div>
+            </div>
+            <!-- 可以继续添加其他技能组 -->
+            <div class="p-8 rounded-2xl border border-zinc-800 bg-zinc-950/40 hover:border-zinc-700/50 transition-all group">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-400 group-hover:bg-teal-500/20 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9l-.707.707M16.243 16.243l-.707.707M12 18a6 6 0 100-12 6 6 0 000 12z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-white tracking-tight">创意与 AI</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-[11px] font-medium text-zinc-500 bg-zinc-900/50 border border-zinc-800 rounded-full">视觉方向</span>
+                    <span class="px-3 py-1 text-[11px] font-medium text-zinc-500 bg-zinc-900/50 border border-zinc-800 rounded-full">AI 写作</span>
+                    <span class="px-3 py-1 text-[11px] font-medium text-zinc-500 bg-zinc-900/50 border border-zinc-800 rounded-full">AI 编程</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="作品" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mb-12 reveal">
+            <div class="flex items-center gap-4 text-xs font-mono text-zinc-500 mb-2">
+                <span class="text-teal-400 font-bold">04 </span>
+                <span class="h-[1px] w-12 bg-zinc-800"></span>
+                <span class="uppercase tracking-widest">作品</span>
+            </div>
+            <h2 class="text-4xl font-bold tracking-tight text-white">精选<span class="text-teal-400">作品</span></h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Work Card Template -->
+            <div class="flex flex-col rounded-2xl border border-zinc-800 bg-zinc-950/40 overflow-hidden group hover:border-zinc-700 transition-all reveal">
+                <div class="relative aspect-[4/3] flex flex-col p-8 justify-between overflow-hidden bg-zinc-900 carousel" data-images='["https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/a.jpg", "https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/b.jpg", "https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/c.jpg"]'>
+                    <!-- Image container -->
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/a.jpg" alt="" class="w-full h-full object-cover main-img transition-all duration-1000">
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-20 indicators"></div>
+                    </div>
+                    <h3 class="relative text-2xl font-bold text-white tracking-tight leading-tight z-10 drop-shadow-md">创意合成系列</h3>
+                    <button class="relative self-end w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white group-hover:scale-110 transition-transform z-10">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+                <div class="p-8 space-y-6">
+                    <p class="text-sm text-zinc-500 leading-relaxed font-medium">通过场景重构与写实渲染将看似无关的元素编织进同一个画面，通过调节光影与强烈反差的场景碰撞...</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-[10px] font-mono text-teal-400/80 bg-teal-500/5 border border-teal-500/10 rounded-full">场景合成</span>
+                        <span class="px-3 py-1 text-[10px] font-mono text-teal-400/80 bg-teal-500/5 border border-teal-500/10 rounded-full">创意视觉</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More cards... -->
+            <div class="flex flex-col rounded-2xl border border-zinc-800 bg-zinc-950/40 overflow-hidden group hover:border-zinc-700 transition-all reveal">
+                <div class="relative aspect-[4/3] flex flex-col p-8 justify-between overflow-hidden bg-zinc-900 carousel" data-images='["https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/1.png", "https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/2.jpg", "https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/3-.jpg"]'>
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/1.png" alt="" class="w-full h-full object-cover main-img transition-all duration-1000">
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-20 indicators"></div>
+                    </div>
+                    <h3 class="relative text-2xl font-bold text-white tracking-tight leading-tight z-10 drop-shadow-md">商业人像精修</h3>
+                    <button class="relative self-end w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white group-hover:scale-110 transition-transform z-10">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+                <div class="p-8 space-y-6">
+                    <p class="text-sm text-zinc-500 leading-relaxed font-medium">为商业拍摄提供专业人像精修服务，精通光影重建、肤质纹理保留与色彩协调，确保品牌视觉的一致性。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-[10px] font-mono text-teal-400/80 bg-teal-500/5 border border-teal-500/10 rounded-full">光影重塑</span>
+                        <span class="px-3 py-1 text-[10px] font-mono text-teal-400/80 bg-teal-500/5 border border-teal-500/10 rounded-full">肤质优化</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col rounded-2xl border border-zinc-800 bg-zinc-950/40 overflow-hidden group hover:border-zinc-700 transition-all reveal">
+                <div class="relative aspect-[4/3] flex flex-col p-8 justify-between overflow-hidden bg-zinc-900 carousel" data-images='["https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/1%20real%20.jpg", "https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/2%20real%20.jpg", "https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/1wedding.jpg"]'>
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://raw.githubusercontent.com/shaojishiduo521-collab/img-bed/main/1%20real%20.jpg" alt="" class="w-full h-full object-cover main-img transition-all duration-1000">
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-20 indicators"></div>
+                    </div>
+                    <h3 class="relative text-2xl font-bold text-white tracking-tight leading-tight z-10 drop-shadow-md">高端相册版式</h3>
+                    <button class="relative self-end w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white group-hover:scale-110 transition-transform z-10">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+                <div class="p-8 space-y-6">
+                    <p class="text-sm text-zinc-500 leading-relaxed font-medium">从原片精修到最终版式，完成多系列全流程相册设计。涵盖人像写真、宝宝成长、创意等题材。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-[10px] font-mono text-teal-400/80 bg-teal-500/5 border border-teal-500/10 rounded-full">精修</span>
+                        <span class="px-3 py-1 text-[10px] font-mono text-teal-400/80 bg-teal-500/5 border border-teal-500/10 rounded-full">版式设计</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voyage Section -->
+    <section id="航海" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mb-12 reveal">
+            <div class="flex items-center gap-4 text-xs font-mono text-zinc-500 mb-2">
+                <span class="text-teal-400 font-bold">05 </span>
+                <span class="h-[1px] w-12 bg-zinc-800"></span>
+                <span class="uppercase tracking-widest">航海案例</span>
+            </div>
+            <h2 class="text-4xl font-bold tracking-tight text-white"><span class="text-teal-400">生财有术</span> 航海实战</h2>
+        </div>
+        
+        <p class="max-w-2xl text-zinc-500 mb-12 -mt-8 leading-relaxed reveal">
+            在「生财有术」社群中参与官方航海实战项目，储备 AI 写作、公众号运营与抖音 CPS 等多种实战经验。
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Voyage Card Case -->
+            <div class="flex flex-col rounded-2xl border bg-zinc-950/40 relative group overflow-hidden border-zinc-800 reveal">
+                <div class="aspect-[4/3] relative overflow-hidden border-b border-zinc-800/50 flex items-center justify-center bg-zinc-950 voyage-carousel" data-images='["https://github.com/shaojishiduo521-collab/img-bed/blob/main/%E8%88%AA%E6%B5%B7/1%20(1).jpg?raw=true", "https://github.com/shaojishiduo521-collab/img-bed/blob/main/%E8%88%AA%E6%B5%B7/1%20(2).jpg?raw=true"]'>
+                    <!-- Image elements -->
+                    <div class="absolute inset-0 w-full h-full">
+                        <img src="https://github.com/shaojishiduo521-collab/img-bed/blob/main/%E8%88%AA%E6%B5%B7/1%20(1).jpg?raw=true" class="absolute inset-0 w-full h-full object-cover blur-md opacity-25 grayscale group-hover:grayscale-0 transition-all duration-700 blur-img">
+                        <img src="https://github.com/shaojishiduo521-collab/img-bed/blob/main/%E8%88%AA%E6%B5%B7/1%20(1).jpg?raw=true" class="relative z-10 w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700 contain-img">
+                    </div>
+                </div>
+                <!-- 内容部分略 -->
+                <div class="p-8">
+                   <h3 class="text-xl font-bold text-white mb-4 tracking-tight">AI写作实战</h3>
+                   <p class="text-sm text-zinc-500 leading-relaxed mb-8">参与生财 AI 写作航海，验证了从 0 到 1 的变现 MVP 闭环。</p>
+                </div>
+            </div>
+            <!-- 可以继续添加其他航海案例，逻辑与 Portfolio 类似 -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="联系" class="py-24 max-w-6xl mx-auto px-6 border-t border-zinc-900">
+        <div class="mb-12 reveal">
+            <div class="flex items-center gap-4 text-xs font-mono text-zinc-500 mb-2">
+                <span class="text-teal-400 font-bold">06 </span>
+                <span class="h-[1px] w-12 bg-zinc-800"></span>
+                <span class="uppercase tracking-widest">联系</span>
+            </div>
+            <h2 class="text-4xl font-bold tracking-tight text-white">开启<span class="text-teal-400">合作</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 reveal">
+            <div class="space-y-8">
+                <p class="text-zinc-500 leading-relaxed max-w-md">
+                    如果您有项目需求、合作意向，欢迎随时通过以下方式联系我。
+                </p>
+                <div class="space-y-4">
+                    <a href="mailto:shaojishiduo521@gmail.com" class="flex items-center gap-4 p-4 rounded-xl border border-zinc-800 bg-zinc-950/50 hover:border-teal-500/30 transition-all group">
+                        <div class="w-10 h-10 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-400">
+                           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-mono text-zinc-600 uppercase">Email</p>
+                            <p class="text-white font-medium">shaojishiduo521@gmail.com</p>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-4 p-4 rounded-xl border border-zinc-800 bg-zinc-950/50 hover:border-teal-500/30 transition-all group">
+                        <div class="w-10 h-10 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-400">
+                           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-mono text-zinc-600 uppercase">WeChat</p>
+                            <p class="text-white font-medium">zqm864638305</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-8 rounded-2xl border border-zinc-800 bg-zinc-950/30 flex flex-col justify-between">
+                <div>
+                   <h4 class="text-white font-bold">目前状态</h4>
+                   <p class="text-sm text-zinc-500">开放接稿 / 创意咨询 / AI 流程搭建</p>
+                </div>
+                <div class="mt-8 pt-8 border-t border-zinc-800/50">
+                   <p class="text-xs text-zinc-600 italic">"让视觉更有生命力，让创意触手可及。"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 max-w-6xl mx-auto px-6 text-zinc-700 text-[10px] font-mono flex items-center justify-between border-t border-zinc-900">
+        <span>© 2026 CHERRY. DESIGN STUDIO</span>
+        <span>MADE WITH PASSION BY CHERRY</span>
+    </footer>
+
+    <script>
+        // 1. Reveal Animation Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 2. Carousel Logic (Portfolio Example)
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const images = JSON.parse(carousel.dataset.images);
+            const imgEl = carousel.querySelector('.main-img');
+            const indicatorsEl = carousel.querySelector('.indicators');
+            let current = 0;
+
+            // Create indicators
+            images.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = `w-1 h-1 rounded-full bg-white/20 transition-all ${i===0 ? 'bg-teal-400 w-3' : ''}`;
+                indicatorsEl.appendChild(dot);
+            });
+
+            setInterval(() => {
+                current = (current + 1) % images.length;
+                imgEl.src = images[current];
+                // Update indicators
+                indicatorsEl.childNodes.forEach((dot, i) => {
+                    dot.className = `w-1 h-1 rounded-full bg-white/20 transition-all ${i===current ? 'bg-teal-400 w-3' : ''}`;
+                });
+            }, 4000);
+        });
+
+        // 3. Voyage Carousel Logic (Blur/Contain style)
+        document.querySelectorAll('.voyage-carousel').forEach(carousel => {
+            const images = JSON.parse(carousel.dataset.images);
+            const blurImg = carousel.querySelector('.blur-img');
+            const containImg = carousel.querySelector('.contain-img');
+            let current = 0;
+
+            setInterval(() => {
+                current = (current + 1) % images.length;
+                blurImg.src = images[current];
+                containImg.src = images[current];
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
